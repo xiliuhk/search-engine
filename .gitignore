@@ -1,0 +1,7 @@
+out/
+index/
+.idea/
+lucene-4.3.0/
+*.iml
+*.docx
+.DS_Store
