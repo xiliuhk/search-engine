@@ -105,6 +105,9 @@ public class LeToRank {
         ArrayList<FeatureVector> ret = vectors;
 
         for (int i = 0; i<18; i++){
+            if (ltr.disabledFeatures.contains(i+1)){
+                continue;
+            }
             double min = Double.MAX_VALUE;
             double max = Double.MIN_VALUE;
             for (FeatureVector v : vectors){

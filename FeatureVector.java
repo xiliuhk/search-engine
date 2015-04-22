@@ -58,7 +58,7 @@ public class FeatureVector {
         try{
             vector = new TermVector(docId, "body");
         }catch (Exception e){
-            //System.err.println(e.toString());
+            vector = null;
         }
 
         //f5:BM25 body score
@@ -70,11 +70,10 @@ public class FeatureVector {
         //f7: term-body overlap
         features.add(computeOverlap(queryTerms, vector));
 
-        vector = null;
         try{
             vector = new TermVector(docId, "title");
         }catch (Exception e){
-            //System.err.println(e.toString());
+            vector = null;
         }
 
         //f8:BM25 title score
@@ -86,11 +85,10 @@ public class FeatureVector {
         //f710 term-title overlap
         features.add(computeOverlap(queryTerms, vector));
 
-        vector = null;
         try{
             vector = new TermVector(docId, "url");
         }catch (Exception e){
-            //System.err.println(e.toString());
+            vector = null;
         }
 
         //f11:BM25 url score
@@ -102,11 +100,10 @@ public class FeatureVector {
         //f13 term-url overlap
         features.add(computeOverlap(queryTerms, vector));
 
-        vector = null;
         try{
             vector = new TermVector(docId, "inlink");
         }catch (Exception e){
-            //System.err.println(e.toString());
+            vector = null;
         }
 
         //f14:BM25 inlink score
@@ -118,11 +115,10 @@ public class FeatureVector {
         //f16: term-inlink overlap
         features.add(computeOverlap(queryTerms, vector));
 
-        vector = null;
         try{
             vector = new TermVector(docId, "body");
         }catch (Exception e){
-            //System.err.println(e.toString());
+            vector = null;
         }
         //f17:stream length
         features.add(getDocLength(queryTerms, vector));
