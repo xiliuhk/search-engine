@@ -20,7 +20,7 @@ public class DocLengthStore {
     private Map<String, NumericDocValues> values = new HashMap<String, NumericDocValues>();
 
     /**
-     * @param reader IndexReader object created in {@link QryEval}.
+     * @param reader IndexReader object created in {@link QryEval_BK}.
      */
     public DocLengthStore(IndexReader reader) throws IOException {
         this.reader = reader;

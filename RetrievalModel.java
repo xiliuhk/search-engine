@@ -10,6 +10,7 @@
 
 public abstract class RetrievalModel {
 
+
     /**
      * Set a retrieval model parameter.
      *

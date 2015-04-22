@@ -118,7 +118,7 @@ public class QryopSlScore extends QryopSl {
         this.field = result.invertedList.field;
         this.ctf = result.invertedList.ctf;
 
-        this.C = QryEval.READER.getSumTotalTermFreq(this.field);
+        this.C = QryEval_BK.READER.getSumTotalTermFreq(this.field);
 
         for (int i = 0; i < result.invertedList.postings.size(); i++) {
             int curDocId = result.invertedList.getDocid(i);

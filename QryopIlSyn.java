@@ -131,11 +131,11 @@ public class QryopIlSyn extends QryopIl {
         for (int i = 0; i < this.args.size(); i++) {
 
             if (!(this.args.get(i) instanceof QryopIl))
-                QryEval.fatalError("Error:  Invalid argument in " +
+                QryEval_BK.fatalError("Error:  Invalid argument in " +
                         this.toString());
             else if ((i > 0) &&
                     (!ptrs.get(i).invList.field.equals(ptrs.get(0).invList.field)))
-                QryEval.fatalError("Error:  Arguments must be in the same field:  " +
+                QryEval_BK.fatalError("Error:  Arguments must be in the same field:  " +
                         this.toString());
         }
 

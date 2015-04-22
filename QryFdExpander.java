@@ -41,8 +41,8 @@ public class QryFdExpander {
         }
 
         //calculate score for each term by forward indexing
-        DocLengthStore s = new DocLengthStore(QryEval.READER);
-        double collectionSize = QryEval.READER.getSumTotalTermFreq("body");
+        DocLengthStore s = new DocLengthStore(QryEval_BK.READER);
+        double collectionSize = QryEval_BK.READER.getSumTotalTermFreq("body");
         for (int i = 0; i < references.size(); i++) {
             // collection vocabulary
             HashMap<String, Integer> dictionary = new HashMap<String, Integer>();
@@ -60,7 +60,7 @@ public class QryFdExpander {
             //update term weights
             for (String term : termMap.keySet()) {
                 double score = termMap.get(term);
-                double ctf = QryEval.READER.totalTermFreq(new Term("body", new BytesRef(term)));
+                double ctf = QryEval_BK.READER.totalTermFreq(new Term("body", new BytesRef(term)));
                 double pMLE = ctf / collectionSize;
                 double p;
                 if (dictionary.containsKey(term)) {
