@@ -1,7 +1,5 @@
 #Search Engine
 
-** Task 1 - 4 has been completed with adequate testings! **
-
 ##Task 1: Boolean Retrieval
 
 ### Operators
@@ -57,7 +55,7 @@
 ## Task 5: LearnToRank
 
 ### Feature Engineering
-* Select Features
+* Features Selection Experiments
 
 ### SVM LearnToRank Model
 * Error Analysis
@@ -67,5 +65,5 @@
 * BM25 Initial Ranking
 * LearnToRank Re-scoring
 * Document Reranking
-* 
+
 
